@@ -36,6 +36,7 @@ p {
     font-size: 30px;
     font-weight: bold;
     margin: 30px 0;
+    line-height: 50px;
 }
 
 .hero-banner {
@@ -167,8 +168,20 @@ nav ul li a {
 
 .moreInfo {
     text-align: center;
+    margin-top: 50px;
 }
 
+.moreInfo p{
+    margin: 25px 0;
+}
+
+span.highlight {
+    background-color: #FFADF9;
+    color: #FF3300;
+    padding: 5px 10px;
+    display: inline;
+    font-weight: 800;
+}
 
 /*
  
