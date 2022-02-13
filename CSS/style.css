@@ -8,7 +8,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
 
 body {
-    background-color: lightblue;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -80,7 +79,13 @@ button.cta {
     border-radius: 10px;
     text-decoration: none;
     box-shadow: 0 0 0 10px rgba(0, 127, 255, 0.15);
-    border: 0px;
+    border: none;
+    cursor: pointer;
+}
+
+a.cta:active, 
+button.cta:active {
+    opacity: 0.7;
 }
 
 a.cta.alt, 
@@ -128,6 +133,7 @@ nav {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 nav .logo {
@@ -144,14 +150,14 @@ nav .logo {
 }
 
 nav ul {
-
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
     display: block;
     float: right;
     margin-right: 30px;
-
 }
 
 nav ul li a {
@@ -169,6 +175,7 @@ nav ul li a {
 .moreInfo {
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .moreInfo p{
@@ -183,8 +190,126 @@ span.highlight {
     font-weight: 800;
 }
 
+.sep {
+    width: 470px;
+    height: 10px;
+    margin: 70px auto;
+    background-color: #111111;
+}
+
+.story h3 {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+ul.nb-list {
+    width: 470px;
+    background-color: #EDEDED;
+    padding: 20px 20px 0 20px;
+    float: left;
+    margin: 0 20px 10px 0;
+    position: relative;
+}
+
+.nb-list li {
+    height: 70px;
+    border-radius: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    padding: 5px 20px;
+}
+
+.nb-list li.blue{
+    background-color: #007FFF;
+}
+.nb-list li.gray{
+    background-color: rgba(17, 17, 17,0.1);
+}
+.nb-list li.yellow{
+    background-color: #FFD400;
+    color: black;
+}
+.nb-list li.red{
+    background-color: #FF3300;
+}
+.nb-list li.pink{
+    background-color: #FFADF9;
+}
+.nb-list li.salmon{
+    background-color: #FA8072;
+}
+
+.nb-list li.dragging {
+    position: absolute;
+    top: 80px;
+    left: 75px;
+    right: -25px;
+    transform: rotate(6deg);;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+}
+
+.nb-list li.dragging::after {
+    content: '';
+    display: block;
+    width: 54px;
+    height: 49px;
+    position: absolute;
+    background: url(../img/hand.png);
+    bottom: -25px;
+    left: 60%;
+    background-size: 100%;
+}
+
+.gang-img {
+    display: block;
+    margin: 0 auto;
+}
+
+footer{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 85px 0 45px;
+    color:rgba(0, 0, 0, 0.4)
+}
+
+footer a {
+    color:rgba(0, 0, 0, 0.4)
+}
+
+/* 
+Story section
+
+    <div class="sep"></div>
+
+    <div class="story" id="story">
+        <ul class="nb-list">
+            <li class="blue">Rock n Roll</li>
+            <li class="gray">&nbsp;</li>
+            <li class="yellow dragging">Laughter</li>
+            <li class="Red">Square Offs</li>
+            <li class="pink">Circuitous Routes</li>
+            <li class="salmon">Trigonometry</li>
+            <li class="blue">Rad Hats</li>
+            <li class="yellow">Being Silly</li>
+        </ul>
+        <h3>Left: Things We Find Important<br>
+            Below: Our Story</h3>
+        <p>Once upon a time there was a group of shapes. They were mostly black and rectangular. They were mean and very serious.</p>
+        <p>And so they kicked the 3 shapes that didn’t conform out of their gang, which was called the Right Angled Gang.</p>
+        <p>And so these 3 shapes were very sad, but found great joy and comfort being around each other. They soon started having a lot of fun, started rocking and rolling, started being silly, and became the most well-known shape gang in the universe.</p>
+        <p>They even started making fun of squares and rectangles in what they like to call ‘Square Offs’!</p>    
+
+    </div>
+    <div class="sep"></div> 
+
+    */
+
 /*
- 
+More Info 
+
 <div class="moreInfo" id="moreInfo">
         <h2>Join Our Fan Club</h2>
         <p>Every week we have <span class="highlight">a party.</span> If you want to join us then join<br>
@@ -196,6 +321,7 @@ span.highlight {
 */
 
 /* 
+Nav
 
 <nav>
         <a href="#">The Gang</a>
@@ -209,6 +335,8 @@ span.highlight {
 */
 
 /* 
+Hero Banner
+
 <div class="hero-banner">
 <div class="wrapper">
     <h4>Imen from <a href="https://imen88.com/" target="_blank">Imen88</a> presents</h4>
